@@ -1,4 +1,4 @@
-const HOSTlogin = "http://127.0.0.1:8000" //http://ladybrill.ru //http://45.89.190.249:5000
+const HOSTlogin = "https://cepbep4-ladybrilltest1-4b6c.twc1.net" //http://ladybrill.ru //http://45.89.190.249:5000
 
 //Загружается поумолчанию
 function onload() { 
