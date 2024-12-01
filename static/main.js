@@ -115,7 +115,7 @@ class Lays {
 
 }
 
-const HOST = "http://127.0.0.1:8000"//"http://127.0.0.1:8000" //http://194.87.143.177:8000;
+const HOST = "https://cepbep4-ladybrilltest1-4b6c.twc1.net"//"http://127.0.0.1:8000" //http://194.87.143.177:8000;
 var check = false;
 var lays = new Lays();
 var stateApp = new StateApp();
