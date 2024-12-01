@@ -270,5 +270,3 @@ def render():
     data=json.loads(request.data.decode(encoding='utf-8'))
     constructor=ConstructProgect(mode=True).load(session['user_id'])
     return constructor.RenderProject(session['user_id'], data['mirror'])
-
-app.run(host='0.0.0.0', debug=True, port=8000) 
