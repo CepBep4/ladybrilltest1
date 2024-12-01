@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LadyBrill</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../static/icon.ico" />
+</head>
+<script src="{{url_for('static', filename='main.js')}}"></script>
+<script src="{{url_for('static', filename='login.js')}}"></script>
+<script type="module" src="https://unpkg.com/color-dialog-box"></script>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home.css')}}">
+<link rel="stylesheet" href="../static/home.css">
+
+<body onload="adaptiveVisual(); checkOnLoad();">
+    <div id="black-background">
+        <!-- <form>
+        <button onclick="LoginExit();">Выйти</button>
+    </form> -->
+        <div class="main-head" id="main-head-id">
+            <div id="label-company-main">LADY BRILL</div>
+            <img src="../static/logo_icon.svg" id="head-icon">
+            <input type="image" src="../static/contact-support.svg" id="button-support"
+                onclick="window.location.replace('https://t.me/LadyBrillHelper');">
+            <input type="image" src="../static/iconamoon_exitl.svg" id="button-exit" onclick="LoginExit();">
+            <div id="label-school-incrustation">школа инкрустации</div>
+        </div>
+        <div class="main-pannel-control" id="main-pannel-control-id">
+            <div id="label-project-settings">Проект</div>
+            <p>
+            <div id="text-weight">Формат</div>
+            <select class="main-pannel-control" type="number" id="input-real-width">
+                <option>A4</option>
+                <option>A3</option>
+            </select>
+            </p>
+            <p>
+            <div id="text-height">Расположение</div>
+            <select class="main-pannel-control" type="number" id="input-real-height">
+                <option>Горизонтальное</option>
+                <option>Вертикальное</option>
+            </select>
+            </p>
+            <p>
+                <button type="submit" id="accept-size-project" onclick="changeSizeProject()">Создать новый</button>
+            </p>
+            <p>
+            <div id="default-layer">У вас нет активных слоёв</div>
+            </p>
+            <p>
+            <div id="main-layer">
+                <input type="image" src="../static/add_effect.svg" id="add-effect-button" onclick="addEffect();">
+                <div id="text-main-layer" style="translate: 0px 30px;">Добавить эффект</div>
+            </div>
+            </p>
+            <p>
+            <div id="choice-next-layer">
+                <div class="effects-adds" id="text-choice-effect">Выберите эффект</div>
+                <div class="effects-adds" id="shrift-add" title="Шрифты" onclick="addShrift();">Шрифты</div>
+                <!-- <div class="effects-adds" id="call-add" title="Калиграфия">Калиграфия</div> -->
+                <div class="effects-adds" id="dot-add" title="Разноразмерная техника"
+                    onclick="document.getElementById('file-loader-dotpattern').click();">Разноразмерная техника</div>
+                <div class="effects-adds" id="dot-add-dia" title="Новая техника"
+                    onclick="document.getElementById('file-loader-dotpatterncolordia').click();">Новая техника</div>
+                <div class="effects-adds" id="color-dot-add" title="Цветная разноразмерная техника"
+                    onclick="document.getElementById('file-loader-dotpatterncolor').click();">Цветная техника</div>
+                <input type="file" id="file-loader-dotpattern" onchange="checkFile();" style="display: none;">
+                <!--settings-photo-effect-diagonal-->
+                <input type="file" id="file-loader-dotpatterncolor" onchange="checkFileColor();" style="display: none;">
+                <input type="file" id="file-loader-dotpatterncolordia" onchange="checkFileColorDia();"
+                    style="display: none;">
+            </div>
+            </p>
+            <p>
+                <!-- Слайдеры для шрифтов -->
+            <div id="settings-text-effect">
+                <!-- Слайдер для координат -->
+                <div class="labels-font-effects" id="label-sl-x">Горизонталь</div>
+                <input class="sliders-font-effects" type="range" id="slider-coord-x" min="-500" value="0" max="2810"
+                    onchange="hitBoxText(); detectEditShrift();" onmousemove="hitBoxText();">
+                <div class="labels-font-effects" id="label-sl-y">Вертикаль</div>
+                <input class="sliders-font-effects" type="range" id="slider-coord-y" min="-500" value="0" max="2810"
+                    onchange="hitBoxText(); detectEditShrift();" onmousemove="hitBoxText();">
+                <div class="labels-font-effects" id="label-text-font">Текст</div>
+                <input type="text" id="config-text-effect" value="Text" onchange="detectEditShrift();">
+                <div class="labels-font-effects" id="label-font-size">Размер шрифта</div>
+                <input class="main-pannel-control" type="number" id="slider-font-size" min="20" max="200" value="7"
+                    onchange="detectEditShrift();">
+                <div class="labels-font-effects" id="label-font-famaly">Шрифт</div>
+                <select class="selections-font-effects" id="choice-font-famaly"
+                    onchange="if(document.getElementById('choice-font-famaly').value == 'Использовать свой'){document.getElementById('file-loader-font').click();} else{stateApp.fileFont=undefined; detectEditShrift();}"></select>
+                <input type="file" id="file-loader-font" onchange="checkUserFont();" style="display: none;">
+                <div class="labels-font-effects" id="label-straz-size">Размер страз</div>
+                <select class="selections-font-effects" id="choice-straz-size" onchange="detectEditShrift();">
+                    <option>ss5</option>
+                    <option>ss6</option>
+                    <option>ss8</option>
+                    <option>ss10</option>
+                    <option>ss12</option>
+                    <option>ss16</option>
+                    <option>ss20</option>
+                </select>
+                <div class="labels-font-effects" id="label-sample">Расстояние между точками</div>
+                <input class="sliders-font-effects" type="range" id="slider-sample" value="8" max="20" min="8"
+                    onchange="detectEditShrift();">
+                <!-- <div class="labels-photo-effects">Корректировка обработки</div>
+                <input class="sliders-photo-effects" type="range" id="slider-quality-x" min="0" value="0" max="40" onchange="detectEditShrift();">
+                <input class="sliders-photo-effects" type="range" id="slider-quality-y" min="0" value="0" max="40" onchange="detectEditShrift();"> -->
+                <div class="labels-photo-effects">Расстояние между буквами</div>
+                <input class="sliders-photo-effects" type="range" id="slider-distanse" min="0" value="0" max="500"
+                    onchange="detectEditShrift();" title="Значение - 8">
+                <!-- <button type="submit" id="delete-dot-button" onclick="deleteDot(); document.getElementsByClassName('control-image-layout')[0].style.zoom=1.0">Удалить точки</button> -->
+                <!-- <button type="submit" id="add-dot-button" onclick="addDot(); document.getElementsByClassName('control-image-layout')[0].style.zoom=1.0" title="Добавленные точки нельзя удалить">Добавить точки</button> -->
+                <div class="save-change-config-effect" onclick="editShrift();">Сохранить</div>
+            </div>
+            </p>
+            <p>
+                <!-- Слайдеры для Картинок -->
+            <div id="settings-photo-effect">
+                <div class="labels-photo-effects" id="label-sl-x-photo">Горизонталь</div>
+                <input class="sliders-photo-effects" type="range" id="slider-coord-x-photo" min="-500" value="0"
+                    max="2810" onchange="hitBoxPhoto(); detectEditPhoto();" onmousemove="hitBoxPhoto();">
+                <div class="labels-photo-effects" id="label-sl-y-photo">Вертикаль</div>
+                <input class="sliders-photo-effects" type="range" id="slider-coord-y-photo" min="-500" value="0"
+                    max="2810" onchange="hitBoxPhoto(); detectEditPhoto();" onmousemove="hitBoxPhoto();">
+                <div class="labels-photo-effects" id="label-sl-scale-photo">Масштаб</div>
+                <input class="sliders-photo-effects" type="range" id="slider-scale-photo" min="0" value="1000"
+                    max="2000" onchange="detectEditPhoto();">
+                <div class="labels-photo-effects">Яркость</div>
+                <input class="sliders-photo-effects" type="range" id="slider-shadow-photo" min="0" value="100" max="200"
+                    onchange="detectEditPhoto();">
+                <div class="labels-photo-effects">Раскладка</div>
+                <input class="sliders-photo-effects" type="range" id="slider-shadow-2-photo" min="0" value="100"
+                    max="200" onchange="detectEditPhoto();">
+                <div class="labels-photo-effects">Расстояние между точками</div>
+                <input class="sliders-photo-effects" type="range" id="slider-sample-photo" min="20" value="20" max="40"
+                    onchange="detectEditPhoto();">
+                <button type="submit" id="choice-straz" onclick="showWindowChoiceStraz()">Выбрать стразы</button>
+                <div class="save-change-config-effect" onclick="editPhoto();">Сохранить</div>
+            </div>
+            </p>
+            <p>
+                <!-- Слайдеры для Цветных Картинок -->
+            <div id="settings-photo-effect-color">
+                <div class="labels-photo-effects" id="label-sl-x-photo-color">Горизонталь</div>
+                <input class="sliders-photo-effects" type="range" id="slider-coord-x-photo-color" min="-500" value="0"
+                    max="2810" onchange="hitBoxPhotoColor();" onmousemove="hitBoxPhotoColor();">
+                <div class="labels-photo-effects" id="label-sl-y-photo-color">Вертикаль</div>
+                <input class="sliders-photo-effects" type="range" id="slider-coord-y-photo-color" min="-500" value="0"
+                    max="2810" onchange="hitBoxPhotoColor();" onmousemove="hitBoxPhotoColor();">
+                <div class="labels-photo-effects" id="label-sl-scale-photo-color">Масштаб</div>
+                <input class="sliders-photo-effects" type="range" id="slider-scale-photo-color" min="100" value="1000"
+                    max="3000">
+                <div class="labels-photo-effects">Яркость</div>
+                <input class="sliders-photo-effects" type="range" id="slider-shadow-photo-color" min="-30" value="0"
+                    max="30" onchange="stateApp.checkChabgeCountColor=true">
+                <div class="labels-photo-effects">Расстояние между точками</div>
+                <input class="sliders-photo-effects" type="range" id="slider-sample-photo-color" min="8" value="20"
+                    max="40">
+                <div class="labels-photo-effects">Количество цветов</div>
+                <input class="sliders-photo-effects" type="range" id="slider-count-color-photo-color" min="2" value="16"
+                    max="16" onchange="stateApp.checkChabgeCountColor=true">
+                <button type="submit" id="choice-straz-color"
+                    onclick="showWindowChoiceStraz(true);stateApp.checkChabgeCountColor=true">Выбрать стразы</button>
+                <button type="submit" id="choice-color-color" onclick="showWindowChoiceColor()">Выбрать цвета</button>
+                <div class="save-change-config-effect" onclick="editPhotoColor();">Сохранить</div>
+            </div>
+            </p>
+            <p>
+                <!-- Слайдеры для Ромбиков -->
+            <div id="settings-photo-effect-color-diagonal">
+                <div class="labels-photo-effects" id="label-sl-x-photo">Горизонталь</div>
+                <input class="sliders-photo-effects" type="range" id="slider-coord-x-photo-dia" min="-500" value="0"
+                    max="2810" onchange="hitBoxPhotoColorDia(); detectEditPhotoDia();"
+                    onmousemove="hitBoxPhotoColorDia();">
+                <div class="labels-photo-effects" id="label-sl-y-photo">Вертикаль</div>
+                <input class="sliders-photo-effects" type="range" id="slider-coord-y-photo-dia" min="-500" value="0"
+                    max="2810" onchange="hitBoxPhotoColorDia(); detectEditPhotoDia();"
+                    onmousemove="hitBoxPhotoColorDia();">
+                <div class="labels-photo-effects" id="label-sl-scale-photo">Масштаб</div>
+                <input class="sliders-photo-effects" type="range" id="slider-scale-photo-dia" min="100" value="200"
+                    max="400" onchange="detectEditPhotoDia();">
+                <div class="labels-photo-effects">Яркость</div>
+                <input class="sliders-photo-effects" type="range" id="slider-shadow-photo-dia" min="0" value="100"
+                    max="200" onchange="detectEditPhotoDia();">
+                <div class="labels-photo-effects">Порог</div>
+                <input class="sliders-photo-effects" type="range" id="slider-porog-photo-dia" min="0" value="100"
+                    max="255" onchange="detectEditPhotoDia();">
+                <div class="labels-photo-effects">Контрастность</div>
+                <input class="sliders-photo-effects" type="range" id="slider-shadow-2-photo-dia" min="0" value="100"
+                    max="200" onchange="detectEditPhotoDia();">
+                <div class="labels-photo-effects">Количество цветов</div>
+                <input class="sliders-photo-effects" type="range" id="slider-sample-photo-dia" min="3" value="17"
+                    max="17" onchange="detectEditPhotoDia();" onmouseenter="showValue('slider-sample-photo-dia')"
+                    onmouseleave="hideValue()">
+                <div class="labels-font-effects" id="label-straz-size-dia">Размер страз</div>
+                <select class="selections-font-effects" id="choice-straz-size-dia" onchange="detectEditPhotoDia();">
+                    <option>ss5</option>
+                    <option>ss6</option>
+                    <option>ss8</option>
+                    <option>ss10</option>
+                    <option>ss12</option>
+                    <option>ss16</option>
+                    <option>ss20</option>
+                </select>
+                <button type="submit" id="choice-color-color-dia" onclick="showWindowChoiceColorDia()">Выбрать
+                    цвета</button>
+                <div class="save-change-config-effect" onclick="editPhotoColorDia();">Сохранить</div>
+                <div style="height: 100px;"></div>
+            </div>
+            </p>
+        </div>
+        <div class="main-layout" id="main-layout-id">
+            <div class="control-image-layout">
+                <img id="prewiew-image" name="layOut">
+                <div id="border-main-image">
+                    <div id="widht-border">Ширина</div>
+                    <div id="height-border">Длина</div>
+                    <div id="cursor"
+                        style="width: 7px; height: 7px; background: red; border-radius: 90px; position: absolute; top: 0; left: 0; visibility: hidden;"
+                        onclick="console.log('hello')"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="main-pannel-layout-control" id="main-pannel-layout-control-id">
+            <div id="label-lays">Слои</div>
+            <div class="lays" id="lays-place"></div>
+            <div id="button-mirror">
+                <div class="labels-photo-effects">Увеличение отображения</div>
+                <input class="sliders-photo-effects" type="range" id="select-visible" min="10" value="100" max="200"
+                    onchange="changeVisible()" onmousemove="changeVisible()">
+                <div class="labels-photo-effects">Настройки экспорта</div>
+                <select class="selections-font-effects" id="selection-mode-render">
+                    <option>Стандарт</option>
+                    <option>Зеркало</option>
+                </select>
+                <button type="submit" id="prepare-render-button" onclick="PrepareRender()">Предпросмотр</button>
+                <button type="submit" class="render-button" onclick="Render()">Экспорт</button>
+            </div>
+        </div>
+        <div id="loads">
+            <div id="fail-window">
+                <div id="text">Упс, что-то пошло не так :(</div>
+            </div>
+            <span class="loader" id="loader"></span>
+        </div>
+
+        <div id="prepare-render-layout">
+            <div id="image-prepare">
+                <img class="prewiew" id="prepare-render-image">
+            </div>
+            <button type="submit" class="render-button" id="back-edit" onclick="refresh();">Назад</button>
+            <button type="submit" class="render-button" id="prep-page-render-button" onclick="Render()">Экспорт</button>
+        </div>
+        <div id="delete-dot-div"
+            style="position: fixed; width: 100%; height: 100%; background: #00000062; overflow: scroll; visibility: hidden;">
+            <img id="delete-dot-image" name="layOut">
+        </div>
+        <div id="back-delete-dot" style="position: absolute; left: 0; right: 0; bottom: 0; visibility: hidden;">
+            <button type="submit" class="render-button" id="back-editt" onclick="refresh();">Назад</button>
+        </div>
+        <a download="custom-filename.jpg" title="ImageName" style="visibility: hidden;" id="dowload_fil">
+            <img alt="ImageName" style="visibility: hidden;" id="dowload_fil-1">
+        </a>
+        <div id="blur-black"></div>
+    </div>
+    <div id="window-choice-straz">
+        <div id="label-straz-choice">Выберите стразы для выкладки</div>
+        <div id="butts-straz">
+            <div name="bcs" class="button-choice-straz-selected" onclick="handleChoiceStraz('ss5')">ss5</div>
+            <div name="bcs" class="button-choice-straz-selected" onclick="handleChoiceStraz('ss6')">ss6</div>
+            <div name="bcs" class="button-choice-straz-selected" onclick="handleChoiceStraz('ss8')">ss8</div>
+            <div name="bcs" class="button-choice-straz-selected" onclick="handleChoiceStraz('ss10')">ss10</div>
+            <div name="bcs" class="button-choice-straz-selected" onclick="handleChoiceStraz('ss12')">ss12</div>
+            <div name="bcs" class="button-choice-straz-selected" onclick="handleChoiceStraz('ss16')">ss16</div>
+            <div name="bcs" class="button-choice-straz-selected" onclick="handleChoiceStraz('ss20')">ss20</div>
+        </div>
+        <div id="button-accept-choice-straz" onclick="acceptListStraz()">Применить</div>
+    </div>
+    <div id="window-choice-color">
+        <div id="label-straz-choice-color">Выберите цвета для страз</div>
+        <div id="buts-color">
+            <div name="button-select-color" class="button-choice-color-deselect1" onclick="handleChoiceColor(1)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect1" onclick="handleChoiceColor(2)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect1" onclick="handleChoiceColor(3)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect1" onclick="handleChoiceColor(4)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect2" onclick="handleChoiceColor(5)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect2" onclick="handleChoiceColor(6)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect2" onclick="handleChoiceColor(7)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect2" onclick="handleChoiceColor(8)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect3" onclick="handleChoiceColor(9)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect3" onclick="handleChoiceColor(10)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect3" onclick="handleChoiceColor(11)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect3" onclick="handleChoiceColor(12)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect4" onclick="handleChoiceColor(13)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect4" onclick="handleChoiceColor(14)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect4" onclick="handleChoiceColor(15)"></div>
+            <div name="button-select-color" class="button-choice-color-deselect4" onclick="handleChoiceColor(16)"></div>
+        </div>
+        <div id="palette-color">
+            <input class="input-color" placeholder="HEX" id="input-color-hex">
+            <div id="button-accept-change-color" onclick="acceptChangeColor()">Окей</div>
+        </div>
+        <div id="button-accept-choice-straz-color" onclick="acceptChoiceColor()">Применить</div>
+    </div>
+    <div id="show-value" class="visible-value-show"></div>
+    <color-picker id="picker"></color-picker>
+
+</body>
+
+</html>

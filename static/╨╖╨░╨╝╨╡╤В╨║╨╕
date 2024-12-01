@@ -1,0 +1,31 @@
+// if(width<=1920 & width>1680){
+//     document.body.style.zoom = 1.0;
+// }
+// else if(width<=1680 & width > 1280){
+//     document.body.style.zoom = 0.8;
+// }
+// else if(width<=1280 & width > 1024){
+//     document.body.style.zoom = 0.67;
+// }
+// else if(width<=1280 & width > 1024){
+//     document.body.style.zoom = 0.67;
+// }
+// else if(width<=1024 & width > 800){
+//     document.body.style.zoom = 0.5;
+// }
+// else if(width<=800){
+//     document.body.style.zoom = 0.35;
+// }
+// else{
+//     document.body.style.zoom = 1.0;
+// }
+
+// #Код для корректировки
+
+ • ss5
+ • ss6
+ • ss8
+ • ss10
+ • ss12
+ • ss16
+ • ss20

@@ -1,0 +1,70 @@
+html, body {
+    height: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+body {
+    background: white;
+}
+
+@font-face {
+    font-family: 'Cygre';
+    src: url('ofontru_Cygre.ttf');
+}
+
+#e-texts{
+    font-family: 'Cygre';
+    font-size:medium;
+    font-weight: bold;
+    background: rgb(128, 73, 255);
+    color: aliceblue;
+    border-radius: 20px;
+    width: 360px;
+    height: 40px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px; 
+}
+
+#button-support{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #8049ff;
+    border-radius: 180px;
+    width: 80px;
+    height: 80px;
+    top: 200px;
+}
+
+#continue{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: rgb(0, 0, 0);
+    background: #ffeb6a;
+    border-radius: 10px;
+    border: 0;
+    width: 100%;
+    height: 35px;
+    transition: all 0.5s;
+    font-weight: bold;
+}
+
+#continue:hover{
+    background-color: rgb(253, 103, 103);
+    color: white;
+}

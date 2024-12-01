@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="LADY BRILL">
+    <meta property="og:site_name" content="Школа инкрустации">
+    <meta property="og:url" content="https://fonts.ladybrill.ru">
+    <meta property="og:description" content="Веб приложение для выкладки разных шрифтов">
+    <meta property="og:image" content="../static/prew.png">
+    <title>Регистрация</title>
+</head>
+    <script src="{{url_for('static', filename='login.js')}}"></script>
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='index.css')}}">
+<body onload="onload(); window.addEventListener('resize', function(event) {document.body.style.zoom = 1/1920*outerWidth;}, true); document.body.style.zoom = 1/1920*outerWidth; checkDevice();">
+    <img src="../static/main_cristal.svg" id="main_cristal_svg">
+    <h1 id="label_name_brill">LADY BRILL</h1>
+    <h4 id="school-incrustation">школа инкрустации</h4>
+    <!-- <img src="../static/reqtangle_login_pass.svg" id="reqtangle-login-pass"> -->
+    <div id="reqtangle-login-pass">
+        <div id="label-input-data">Введите свои данные</div>
+        <input title="Логин" placeholder="Логин" id="login">
+        <input title="Пароль" type="password" placeholder="Пароль" id="password">
+        <button type="button" onclick="loginEnter();" id="enter-button">Войти</button>
+    </div>
+    
+    
+</body>
+</html>

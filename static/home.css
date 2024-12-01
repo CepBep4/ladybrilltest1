@@ -1,0 +1,1121 @@
+html,
+body {
+    height: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+
+}
+
+body {
+    background-color: #ffffff;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora.ttf');
+}
+
+@font-face {
+    font-family: 'Desty';
+    src: url('ofont.ru_Denistina.ttf');
+}
+
+@font-face {
+    font-family: 'Cygre';
+    src: url('ofontru_Cygre.ttf');
+}
+
+div.main-head {
+    position: fixed;
+    background: #495198;
+    box-shadow: inset 0px 0px 20px black;
+    width: 100%;
+    display: block;
+}
+
+div.main-pannel-control {
+    position: fixed;
+    top: 125px;
+    border-radius: 20px;
+    display: block;
+    background: rgb(214, 214, 214);
+    width: 20%;
+    height: 86%;
+    display: block;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+div.main-pannel-layout-control {
+    position: fixed;
+    top: 125px;
+    border-radius: 20px;
+    display: block;
+    background: rgb(214, 214, 214);
+    width: 15%;
+    height: 86%;
+    display: block;
+    left: 85%;
+}
+
+div.main-layout {
+    position: fixed;
+    top: 0;
+    margin-top: 7%;
+    left: 21.5%;
+    border-radius: 10px;
+    border: dotted 5px black;
+    display: block;
+    background: rgb(214, 214, 214);
+    width: 62.5%;
+    height: 85%;
+    overflow: scroll;
+    display: block;
+}
+
+div.lays {
+    position: fixed;
+    width: 100%;
+}
+
+#label-company-main {
+    font-family: 'Lora';
+    color: white;
+    -webkit-text-stroke: 0px white;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 50px;
+    position: relative;
+    left: 37px;
+    top: 5px;
+    display: inline;
+}
+
+#label-school-incrustation {
+    font-family: 'Desty';
+    -webkit-text-stroke: 0px black;
+    color: white;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 30px;
+    position: relative;
+    left: 70px;
+    bottom: 5px;
+    display: block;
+}
+
+#head-icon {
+    display: inline;
+    translate: 37px;
+    position: relative;
+    top: 25px;
+    left: 10px;
+}
+
+#button-exit {
+    display: inline;
+    position: relative;
+    left: 72%;
+    top: 19px;
+}
+
+#button-support {
+    display: inline;
+    position: relative;
+    left: 70%;
+    top: 19px;
+}
+
+#label-project-settings {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Cygre";
+}
+
+#text-weight {
+    position: relative;
+    left: 10px;
+    display: inline;
+    font-size: 20px;
+    font-family: "Cygre";
+}
+
+#text-height {
+    position: relative;
+    left: 10px;
+    display: inline;
+    font-size: 20px;
+    font-family: "Cygre";
+}
+
+#text-metrical-1 {
+    position: relative;
+    left: 13px;
+    display: inline;
+    font-size: 20px;
+    font-family: "Cygre";
+    left: 25px;
+}
+
+#text-metrical-2 {
+    position: relative;
+    left: 27px;
+    display: inline;
+    font-size: 20px;
+    font-family: "Cygre";
+}
+
+
+#input-real-width {
+    position: relative;
+    left: 10px;
+    border-radius: 20px;
+    display: inline;
+    font-size: 15px;
+    border: 0;
+    width: 40%;
+    text-align: center;
+    translate: 13px;
+}
+
+
+#input-real-height {
+    position: relative;
+    left: 10px;
+    border-radius: 20px;
+    display: inline;
+    font-size: 15px;
+    border: 0;
+    right: 5px;
+    width: 40%;
+    text-align: center;
+    translate: 16px;
+}
+
+#accept-size-project {
+    position: relative;
+    border-radius: 20px;
+    font-size: 15px;
+    left: 5px;
+    border: 0;
+    width: 95%;
+    height: 30px;
+    text-align: center;
+    transition: all 0.2s
+}
+
+#accept-size-project:hover {
+    background: rgb(145, 145, 255);
+    color: aliceblue;
+    box-shadow: inset 0px 0px 10px rgb(119, 0, 255);
+}
+
+#label-lays {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Cygre";
+}
+
+#test-image {
+    width: 2000px;
+    height: 2000px;
+}
+
+.control-image-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#default-layer {
+    position: relative;
+    text-align: center;
+    top: 225px;
+    font-family: 'Cygre';
+    font-size: large;
+    visibility: hidden;
+}
+
+#add-effect-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 15%;
+    height: 15%;
+    transition: width 0.2s;
+}
+
+#add-effect-button:hover {
+    width: 30%;
+    height: 30%;
+}
+
+#text-main-layer {
+    position: relative;
+    text-align: center;
+    top: 270px;
+    font-family: 'Cygre';
+    font-size: 20px;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 48px;
+    height: 48px;
+    border: 5px solid #6f00ff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    animation: rotation 1s linear infinite;
+    transition: all 0.2s;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loads {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: #ffffff;
+    transition: all 0.2s;
+    position: fixed;
+}
+
+.effects-adds {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    position: relative;
+    top: 80px;
+    font-family: 'Cygre';
+    font-size: 20px;
+    border-radius: 20px;
+    background: white;
+    height: 30px;
+    width: 90%;
+    left: 20px;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.effects-adds:hover {
+    background: rgb(145, 145, 255);
+    color: aliceblue;
+    box-shadow: inset 0px 0px 10px rgb(119, 0, 255);
+}
+
+#text-choice-effect {
+    background: transparent;
+}
+
+#text-choice-effect:hover {
+    background: transparent;
+    color: black;
+    box-shadow: inset 0px 0px 0px white
+}
+
+/* КОнфигурация настройки текста эффеука */
+#settings-text-effect {
+    position: absolute;
+    background: #bfbfbf;
+    border-radius: 20px;
+    width: 90%;
+    height: 600px;
+    left: 18px;
+    top: 0;
+    display: block;
+    justify-content: center;
+    visibility: hidden;
+    /* margin-top: 230px; */
+    margin-top: 230px;
+    overflow-y: scroll;
+}
+
+input[type=range] {
+    width: 300px;
+}
+
+.labels-font-effects {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Cygre';
+    color: black;
+    margin-bottom: 10px;
+}
+
+.sliders-font-effects {
+    position: relative;
+    left: 16px;
+    margin-bottom: 10px;
+}
+
+.selections-font-effects {
+    position: relative;
+    border: 0;
+    border-radius: 20px;
+    left: 16px;
+    width: 300px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-indent: 10px;
+}
+
+#config-text-effect {
+    position: relative;
+    left: 14px;
+    width: 300px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    text-indent: 10px;
+    margin-bottom: 10px;
+}
+
+.save-change-config-effect {
+    position: relative;
+    width: 150px;
+    left: 90px;
+    margin-top: 10px;
+    font-family: 'Cygre';
+    font-size: 16px;
+    background: #FFF;
+    border-radius: 20px;
+    text-align: center;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.save-change-config-effect:hover {
+    background: rgb(0, 0, 38);
+    color: aliceblue;
+}
+
+#border-main-image {
+    width: 1508px;
+    height: 559px;
+    background-color: #6f00ff00;
+    border: 5px solid rgb(53, 1, 239);
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    cursor: none;
+}
+
+#widht-border {
+    font-size: 20px;
+    font-family: 'Cygre';
+    color: rgb(239, 235, 1);
+    background: rgba(0, 0, 0, 0.466);
+}
+
+#height-border {
+    font-size: 20px;
+    font-family: 'Cygre';
+    color: rgb(239, 227, 1);
+    background: rgba(0, 0, 0, 0.466);
+}
+
+#slider-font-size {
+    position: relative;
+    left: 14px;
+    width: 300px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    text-indent: 10px;
+    margin-bottom: 10px;
+}
+
+#settings-photo-effect {
+    position: absolute;
+    background: #bfbfbf;
+    border-radius: 20px;
+    width: 90%;
+    height: 600px;
+    left: 18px;
+    top: 0;
+    display: block;
+    justify-content: center;
+    visibility: hidden;
+    /* margin-top: 230px; */
+    margin-top: 230px;
+    overflow-y: scroll;
+}
+
+#settings-photo-effect-color {
+    position: absolute;
+    background: #bfbfbf;
+    border-radius: 20px;
+    width: 90%;
+    height: 600px;
+    left: 18px;
+    top: 0;
+    display: block;
+    justify-content: center;
+    visibility: hidden;
+    /* margin-top: 230px; */
+    margin-top: 230px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    background-color: #00000000;
+    width: 0px;
+    height: 0px;
+}
+
+#settings-photo-effect-color-diagonal {
+    position: absolute;
+    background: #bfbfbf;
+    border-radius: 20px;
+    width: 90%;
+    height: 600px;
+    left: 18px;
+    top: 0;
+    display: block;
+    justify-content: center;
+    visibility: hidden;
+    /* margin-top: 230px; */
+    margin-top: 230px;
+    overflow-y: scroll;
+}
+
+.labels-photo-effects {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Cygre';
+    color: black;
+    margin-bottom: 10px;
+}
+
+.sliders-photo-effects {
+    position: relative;
+    left: 16px;
+    margin-bottom: 10px;
+}
+
+.entry-photo {
+    position: relative;
+    left: 14px;
+    width: 300px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    text-indent: 10px;
+    margin-bottom: 10px;
+}
+
+#button-mirror {
+    position: absolute;
+    bottom: 0;
+    translate: 0px -30px;
+}
+
+#selection-mode-render {
+    width: 250px;
+    font-size: 20px;
+    font-family: 'Cygre';
+}
+
+.render-button {
+    position: relative;
+    width: 250px;
+    left: 16px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 20px;
+}
+
+.render-button:hover {
+    background: rgb(115, 0, 255);
+    color: aliceblue;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+#prepare-render-button {
+    position: relative;
+    width: 250px;
+    left: 16px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#prepare-render-button:hover {
+    background: rgb(115, 0, 255);
+    color: aliceblue;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+#prepare-render-layout {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(187, 187, 187);
+    visibility: hidden;
+}
+
+#image-prepare {
+    width: 80%;
+    height: 70%;
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.prewiew {
+    max-width: none;
+
+    min-width: auto;
+    min-height: auto;
+
+    height: 100%;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#prep-page-render-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    translate: 0px -60px;
+}
+
+#back-edit {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    translate: 0px -20px;
+}
+
+#back-editt {
+    position: absolute;
+    background-color: #cecece;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    translate: 0px -20px;
+}
+
+#delete-dot-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+    left: 39px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 20px;
+}
+
+#delete-dot-button:hover {
+    background: rgb(115, 0, 255);
+    color: aliceblue;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+#add-dot-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+    left: 39px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 20px;
+}
+
+#add-dot-button:hover {
+    background: rgb(115, 0, 255);
+    color: aliceblue;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+#select-visible {
+    width: 250px;
+    font-size: 20px;
+    font-family: 'Cygre';
+}
+
+#black-background {
+    width: 100%;
+    height: 100%;
+    transition: filter 0.5s;
+}
+
+#window-choice-straz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 35%;
+    height: 15%;
+    background: #ffffff00;
+    border-radius: 15px;
+    opacity: 0;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+#choice-straz {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+    left: 39px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 20px;
+}
+
+#choice-straz:hover {
+    background: rgb(115, 0, 255);
+    color: aliceblue;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+#blur-black {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+#label-straz-choice {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    font-family: "Cygre";
+    width: 100%;
+    background-color: #6f00ff00;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+#butts-straz {
+    translate: 0px 10px;
+}
+
+div.button-choice-straz {
+    position: relative;
+    display: inline;
+    background-color: #ffffff30;
+    padding: 7px;
+    border-radius: 15px;
+    width: 100px;
+    text-align: center;
+    margin-left: 3%;
+    top: 20px;
+    left: 75px;
+    font-family: "Cygre";
+    transition: all 0.5s;
+}
+
+div.button-choice-straz:hover {
+    background-color: #ffffff8d;
+}
+
+#button-accept-choice-straz {
+    position: absolute;
+    bottom: 0;
+    margin-left: 34%;
+    margin-right: auto;
+    translate: 0px -10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    font-family: "Cygre";
+    width: 30%;
+    background-color: #9e54ff;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+#button-accept-choice-straz:hover {
+    background: rgba(255, 255, 255, 0.262);
+    color: black;
+}
+
+.button-choice-straz-selected {
+    position: relative;
+    display: inline;
+    background: #8bff6e;
+    padding: 7px;
+    border-radius: 15px;
+    width: 100px;
+    text-align: center;
+    margin-left: 3%;
+    top: 20px;
+    left: 75px;
+    font-family: "Cygre";
+    transition: all 0.5s;
+}
+
+.button-choice-straz-selected:hover {
+    background-color: #ffffff8d;
+}
+
+#settings-button {
+    position: relative;
+    width: 250px;
+    left: 16px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+#settings-button:hover {
+    background: rgb(115, 0, 255);
+    color: aliceblue;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+#choice-straz-color {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+    left: 39px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 20px;
+}
+
+#choice-straz-color:hover {
+    background: rgb(115, 0, 255);
+    color: aliceblue;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+#choice-color-color {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+    left: 39px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 20px;
+}
+
+#choice-color-color-dia {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+    left: 39px;
+    background: #FFF;
+    border: 0;
+    border-radius: 20px;
+    font-family: 'Cygre';
+    font-size: 20px;
+}
+
+#choice-color-color:hover {
+    background: rgb(115, 0, 255);
+    color: aliceblue;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+#label-straz-choice-color {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    font-family: "Cygre";
+    width: 100%;
+    background-color: #6f00ff00;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#window-choice-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 35%;
+    height: 26%;
+    background: #ffffff00;
+    border-radius: 15px;
+    opacity: 0;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+[name='button-select-color'] {
+    text-align: center;
+    font-size: 7px;
+}
+
+.button-choice-color-deselect1 {
+    margin-top: 10px;
+    width: 60px;
+    height: 30px;
+    background: rgb(255, 247, 0);
+    border-radius: 10px;
+    translate: 80px 0px;
+    transition: all 0.5s;
+}
+
+.button-choice-color-deselect1:hover {
+    width: 64px;
+    background-color: #ffffff47;
+    translate: 78px 0px;
+}
+
+.button-choice-color-deselect2 {
+    margin-top: 10px;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(0, 255, 30);
+    border-radius: 10px;
+    translate: 220px -160px;
+    transition: all 0.5s;
+}
+
+.button-choice-color-deselect2:hover {
+    width: 64px;
+    background-color: #ffffff47;
+    translate: 218px -160px;
+}
+
+.button-choice-color-deselect3 {
+    margin-top: 10px;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(0, 213, 255);
+    border-radius: 10px;
+    translate: 360px -320px;
+    transition: all 0.5s;
+}
+
+.button-choice-color-deselect3:hover {
+    width: 64px;
+    background-color: #ffffff47;
+    translate: 358px -320px;
+}
+
+.button-choice-color-deselect4 {
+    margin-top: 10px;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(255, 0, 30);
+    border-radius: 10px;
+    translate: 500px -480px;
+    transition: all 0.5s;
+}
+
+.button-choice-color-deselect4:hover {
+    width: 64px;
+    background-color: #ffffff47;
+    translate: 498px -480px;
+}
+
+#button-accept-choice-straz-color {
+    position: absolute;
+    top: 0;
+    margin-top: 250px;
+    margin-left: 34%;
+    margin-right: auto;
+    translate: 0px -10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    font-family: "Cygre";
+    width: 30%;
+    background-color: #9e54ff;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+#button-accept-choice-straz-color:hover {
+    background: rgba(255, 255, 255, 0.302);
+    color: black;
+}
+
+#buts-color {
+    visibility: hidden;
+}
+
+#palette-color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.input-color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 0;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    background: #ffffff9a;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    translate: 0px 10px;
+    color: #000000;
+    outline: none;
+    visibility: hidden;
+}
+
+#label-color-change {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 60px;
+    font-size: 20px;
+    color: #FFF;
+}
+
+#button-accept-change-color {
+    position: absolute;
+    bottom: 0;
+    margin-left: 34%;
+    margin-right: auto;
+    translate: 0px -10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    font-family: "Cygre";
+    width: 30%;
+    background-color: #9e54ff;
+    border-radius: 15px;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+#button-accept-change-color:hover {
+    background: white;
+    color: black;
+}
+
+#fail-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30%;
+    height: 4%;
+    background: #ffd18c;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+
+
+}
+
+#text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-family: 'Cygre';
+    font-size: 30px;
+    text-align: center;
+    translate: 0px 3px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#show-value {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 100px;
+    margin-top: 40%;
+    font-weight: bold;
+    text-align: center;
+    color: #0000006e;
+    font-family: 'Arial';
+    transition: opacity 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}

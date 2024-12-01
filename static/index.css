@@ -1,0 +1,197 @@
+html, body {
+    height: 100%;
+}
+html {
+    display: table;
+    margin: auto;
+    
+}
+body {
+    display: table-cell;
+    vertical-align: middle;
+    /* background: linear-gradient(white, #222098 75%); */
+    background: white;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora.ttf');
+}
+@font-face {
+    font-family: 'Desty';
+    src: url('ofont.ru_Denistina.ttf');
+}
+
+#label_name_brill{
+    font-family: 'Lora';
+    color: #000;
+    font-size: 150px;
+    font-weight:lighter;
+    transform: translate(0em,-55%);
+    animation-duration: 1s;
+    animation-name: bouncy-5;
+    transition: all 2s
+}
+
+#label_name_brill:hover{
+    text-shadow: #ffffff 10px 0 20px;
+}
+
+@keyframes bouncy-5 {
+    from {
+        transform: translate(0em,-500%);
+    }
+  
+    to {
+        transform: translate(0em,-55%);
+    }
+  }
+
+#school-incrustation{
+    color: #000;
+    font-family: 'Desty';
+    font-size: 70px;
+    font-weight:lighter;
+    transform: translate(2.5em,-3.4em);
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-name: school;
+    animation-fill-mode: forwards;
+    transition: all 2s
+}
+
+#school-incrustation:hover{
+    text-shadow: #ffffff 10px 0 20px;
+}
+
+@keyframes school {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+}
+
+#main_cristal_svg{
+    transform: translate(16em,5.5em);
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-name: cristal;
+    animation-fill-mode: forwards;
+    transition: all 0.2s
+}
+
+#main_cristal_svg:hover{
+    translate: 0px -30px;
+}
+
+@keyframes cristal {
+    from {
+        filter:blur(10px);
+        opacity: 0;
+    }
+  
+    to {
+        filter:blur(0px);
+        opacity: 1;
+        transform: translate(16em,6.5em);
+    }
+}
+
+#reqtangle-login-pass{
+    transform: translate(0em,-16em);
+    width: 814px;
+    height: 340px;
+    background: linear-gradient(white, #2e2caa46 80%);
+    border-radius: 66px;
+    border: 3px solid black;
+    box-shadow: 0px 50px 4px 0px rgba(0, 0, 0, 0.25);
+    animation-name: square-anim;
+    animation-duration: 1s;
+    transition: all 0.2s
+    
+}
+
+@keyframes square-anim {
+    from {
+        transform: translate(0em,40em);
+    }
+  
+    to {
+        transform: translate(0em,-16em);
+    }
+}
+
+#label-input-data{
+    font-family: 'Lora';
+    text-align: center;
+    font-size: 40px;
+    transform: translate(3em,20px);
+    border: 1px solid black;
+    border-radius: 16px;
+    width: 579px;
+    height: 49px;
+}
+
+#login{
+    width: 576px;
+    height: 43px;
+    transform: translate(4em,85px);
+    font-size: 30px;
+    font-family: 'Lora';
+    border-radius: 90px;
+    outline: none;
+    border: solid white;
+    text-align: center;
+    box-shadow: 0px 13px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s
+}
+
+#login:focus{
+    transform: translate(4em,80px);
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#password{
+    width: 576px;
+    height: 43px;
+    transform: translate(4em,110px);
+    font-size: 30px;
+    font-family: 'Lora';
+    outline: none;
+    border-radius: 90px;
+    border: solid white;
+    text-align: center;
+    box-shadow: 0px 13px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s
+}
+
+#password:focus{
+    transform: translate(4em,105px);
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#enter-button{
+    text-align: center;
+    width: 167px;
+    height: 43px;
+    border-radius: 20px;
+    background-color: #7F7CE2;
+    font-family: 'Lora';
+    color: white;
+    border: 4px solid #8B84DB;
+    font-size: 25px;
+    transform: translate(-10.5em,170px);
+    box-shadow: 0px 13px 4px 0px rgba(0, 0, 0, 0.25);
+    animation-duration: 800ms;
+    transition: all 0.2s
+}
+
+#enter-button:hover{
+    width: 200px;
+    translate: -17px;
+}

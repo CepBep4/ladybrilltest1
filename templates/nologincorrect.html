@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка авторизации</title>
+</head>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        html {
+            display: table;
+            margin: auto;
+        }
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+    <script src="{{url_for('static', filename='loginount.js')}}"></script>
+<body>
+
+    <h1>Неверный логин или пароль</h1>
+    <form href="http://127.0.0.1:5000">
+        <button onclick="LoginExit();">Попробовать ещё раз</button>
+    </form>
+</body>
+</html>
